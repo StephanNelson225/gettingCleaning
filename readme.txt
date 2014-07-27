@@ -11,3 +11,23 @@ with accelerometers, gyroscopes and other motion sensors,
 6 and 9-axis MotionTracking™ solutions have the ability to accurately identify and characterize a broad range of fitness activities allowing for very accurate calculations of, for example, calorie burn rate over time.
 
 C:\Users\Steve\Dropbox\GettingCleaning\July Course\Project
+Table 2: Summary of Signals
+136
+Signal Name
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
