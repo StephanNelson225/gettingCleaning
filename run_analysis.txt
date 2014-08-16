@@ -1,7 +1,9 @@
 #Reading in the data
 #https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-#note since I use a windows 7 machine nothing special needs to happen to open the #zips.  Comments have been minimized for convenience of peer reviewer.  Note: data #directories are likely the same as what you used in your project rather having all #of the data files your working directory.
-# note: if you have pdated R to the most recent version you may have to reinstall or #update some of the packages called here.
+#note since I use a windows 7 machine nothing special needs to happen to open the #zips.  Comments have been minimized for convenience of peer reviewer see codebook
+#and read.me for added explaination.  Note: data directory structure is likely the same as what you used in your project rather moving all of the data files your working directory.
+# further note: if you have updated R to the most recent version you may have to 
+#reinstall or update some of the packages called here.
 ========================================================
 
 #the training and test sets are combined creating a data.frame  
