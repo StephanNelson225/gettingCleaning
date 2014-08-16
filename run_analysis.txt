@@ -37,10 +37,8 @@ complete_rawdata$activity<-factor(complete_rawdata$activity,levels=activityname$
 
 #Get and scope out variable name list of the data. Result is 561 variable names.
 colfeature<-read.table("./UCI HAR Dataset/features.txt", colClasses="character")
-# Subset the features data to only include mean() and std() columns. 
-names <- colfeature[grepl("-mean\\(\\)|-std\\(\\)", colfeature$V2),]
-
-#Gets the variable name list of the data. Result is 561 variable names.  Subset the activity data to only include "mean()" and "std()" columns as that is one reasonable interpretation of the instructions.  This results in 66 columns
+#Gets the variable name list of the data. Result is 561 variable names.  
+#Subset the activity data to only include "mean()" and "std()" columns as that is one reasonable interpretation of the instructions.  This results in 66 columns
 colfeature<-read.table("./UCI HAR Dataset/features.txt", colClasses="character")
 names <- colfeature[grepl("-mean\\(\\)|-std\\(\\)", colfeature$V2),]
 
@@ -76,7 +74,7 @@ dim(wearmelt)# this creates the long format from the wide.
 wearablegroups<-group_by(wearmelt, variable, subject, activity)
 dim(wearablegroups)#once melted and grouped the dimensins 885715X5 - long format
 #instructions:Creates a second, independent tidy data set with the average of each variable for each activity and each subject. This implies the order of variable, subjectid, activity and mean value.
-tidywearable<-summarize(wearablegroups, average_for_var_by_subj_activity=round(mean(value),4))
+tidywearable<-summarize(wearablegroups, average_for_var_by_subj_activity=round(mean(value),4)) 
 write.table(tidywearable,"tidywearable.txt",row.names=FALSE)# without the row.names false argument, the text file columns don't line up right.
 
 
