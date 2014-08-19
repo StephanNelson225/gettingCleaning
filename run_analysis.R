@@ -1,8 +1,11 @@
 Reading in the data
 #https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-#note since I use a windows 7 machine nothing special needs to happen to open the #zips.  Comments have been minimized for convenience of peer reviewer see codebook
-#and read.me for added explaination.  Note: data directory structure is likely the same as what you used in your project rather moving all of the data files your working directory.
-# further note: if you have updated R to the most recent version you may have to 
+#note since I use a windows 7 machine nothing special needs to happen to open the #zips.  
+#Comments have been minimized for convenience of peer reviewer see codebook
+#and read.me for added explaination.  
+#Note1 : data directory structure is likely the same as what you used in your project 
+# rather moving all of the data files your working directory.
+#Note2: if you have updated R to the most recent version you may have to 
 #reinstall or update some of the packages called here.
 ========================================================
   
@@ -12,10 +15,8 @@ Reading in the data
 #  a. Xtrain and Xtest into a 10299 X 561 data.frame with the data and observations
 #  b. X_train and y_train into a 10299 X 1 data.frame of raw activity codes  
 #  c. subject_test and subjecttrain into a 10299 X 1 data.frame of subject ids  
-#  d. cbind the data.frames together into a 10,299 X 563 data.frame.  
-#  e. combine train and test activity codes together
-#  f. combine train and test subject ids and rbind to data frame
-#  g. apply activity names to activity codes
+#  d. cbind the data.frames (a,b,c) together.  
+#  e. apply activity names to activity codes as factors
  
   
   
@@ -84,6 +85,6 @@ monitorgroups<-group_by(actmonitor, variable, subject, activity)
 tidyactivitymonitor<-summarize(monitorgroups, average.measure.by.subjects.activity=round(mean(value),4))
 # 11880X4
 # write.table(tidyactivitymonitor,"tidyactivitymonitor.txt",row.names=FALSE)# without the row.names false argument, the text file columns don't line up right.
-#sample data for first subject
-a<-subset(tidyactivitymonitor,tidyactivitymonitor[,2]==1)
+#Example mean data for WALKING measure for first subject  
+a<-subset(tidyactivitymonitor,tidyactivitymonitor[,2]==1 & tidyactivitymonitor[,3]=="WALKING")
 a
