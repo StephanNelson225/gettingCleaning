@@ -1,105 +1,282 @@
-This Codebook that describes the variables, the data, and any transformations or work that you performed to clean up the data.
 
-**The Data**
+###Code book for Tidy Data  ###
+###  ###
+The tidy dataset ( tidyactivitymonitor.txt) submitted for this  project has the dimension of 10,088 rows by four variable columns.  This tidy data is in the long format with the first column being that variable name the second column the subject number, the third column is the activity name and the fourth column is the mean of the variable measures for the given subject and activity.  This calculated values is named  "average.measure.by.subjects.activity".
 
-The dataset includes the following files:
+The means represent values for 66 variables, for each of 30 subjects and 6 activity types.  The variables and their descriptions follow:
 
-- 'features_info.txt': Provides a description of the features and how the features were collected and derived.
+**Variables**
+             1                                                                                              
+Variable    "t.body.acc.mean.x"                                                                            
+Description "Mean of the time domain signal of the body acceleration in the x-axis in xyz space direction."
+            2                                                                                              
+Variable    "t.body.acc.mean.y"                                                                            
+Description "Mean of the time domain signal of the body acceleration in the y-axis in xyz space direction."
+            3                                                                                              
+Variable    "t.body.acc.mean.z"                                                                            
+Description "Mean of the time domain signal of the body acceleration in the z-axis in xyz space direction."
+            4                                                                                                            
+Variable    "t.body.acc.std.x"                                                                                           
+Description "Standard deviation of the time domain signal of the body acceleration in the x-axis in xyz space direction."
+            5                                                                                                            
+Variable    "t.body.acc.std.y"                                                                                           
+Description "Standard deviation of the time domain signal of the body acceleration in the y-axis in xyz space direction."
+            6                                                                                                            
+Variable    "t.body.acc.std.z"                                                                                           
+Description "Standard deviation of the time domain signal of the body acceleration in the z-axis in xyz space direction."
+            7                                                                                                 
+Variable    "t.gravity.acc.mean.x"                                                                            
+Description "Mean of the time domain signal of the gravity acceleration in the x-axis in xyz space direction."
+            8                                                                                                 
+Variable    "t.gravity.acc.mean.y"                                                                            
+Description "Mean of the time domain signal of the gravity acceleration in the y-axis in xyz space direction."
+            9                                                                                                 
+Variable    "t.gravity.acc.mean.z"                                                                            
+Description "Mean of the time domain signal of the gravity acceleration in the z-axis in xyz space direction."
+            10                                                                                                              
+Variable    "t.gravity.acc.std.x"                                                                                           
+Description "Standard deviation of the time domain signal of the gravity acceleration in the x-axis in xyz space direction."
+            11                                                                                                              
+Variable    "t.gravity.acc.std.y"                                                                                           
+Description "Standard deviation of the time domain signal of the gravity acceleration in the y-axis in xyz space direction."
+            12                                                                                                              
+Variable    "t.gravity.acc.std.z"                                                                                           
+Description "Standard deviation of the time domain signal of the gravity acceleration in the z-axis in xyz space direction."
+            13                                                                                                  
+Variable    "t.body.acc.jerk.mean.x"                                                                            
+Description "Mean of the time domain signal of the body acceleration jerk in the x-axis in xyz space direction."
+            14                                                                                                  
+Variable    "t.body.acc.jerk.mean.y"                                                                            
+Description "Mean of the time domain signal of the body acceleration jerk in the y-axis in xyz space direction."
+            15                                                                                                  
+Variable    "t.body.acc.jerk.mean.z"                                                                            
+Description "Mean of the time domain signal of the body acceleration jerk in the z-axis in xyz space direction."
+            16                                                                                                                
+Variable    "t.body.acc.jerk.std.x"                                                                                           
+Description "Standard deviation of the time domain signal of the body acceleration jerk in the x-axis in xyz space direction."
+            17                                                                                                                
+Variable    "t.body.acc.jerk.std.y"                                                                                           
+Description "Standard deviation of the time domain signal of the body acceleration jerk in the y-axis in xyz space direction."
+            18                                                                                                                
+Variable    "t.body.acc.jerk.std.z"                                                                                           
+Description "Standard deviation of the time domain signal of the body acceleration jerk in the z-axis in xyz space direction."
+            19                                                                                              
+Variable    "t.body.gyro.mean.x"                                                                            
+Description "Mean of the time domain signal of the body angular speed in the x-axis in xyz space direction."
+            20                                                                                              
+Variable    "t.body.gyro.mean.y"                                                                            
+Description "Mean of the time domain signal of the body angular speed in the y-axis in xyz space direction."
+            21                                                                                              
+Variable    "t.body.gyro.mean.z"                                                                            
+Description "Mean of the time domain signal of the body angular speed in the z-axis in xyz space direction."
+            22                                                                                                            
+Variable    "t.body.gyro.std.x"                                                                                           
+Description "Standard deviation of the time domain signal of the body angular speed in the x-axis in xyz space)direction."
+            23                                                                                                            
+Variable    "t.body.gyro.std.y"                                                                                           
+Description "Standard deviation of the time domain signal of the body angular speed in the y-axis in xyz space direction."
+            24                                                                                                            
+Variable    "t.body.gyro.std.z"                                                                                           
+Description "Standard deviation of the time domain signal of the body angular speed in the z-axis in xyz space direction."
+            25                                                                                                     
+Variable    "t.body.gyro.jerk.mean.x"                                                                              
+Description "Mean of the time domain signal of the body angular acceleration in the x-axis in xyz space direction."
+            26                                                                                                     
+Variable    "t.body.gyro.jerk.mean.y"                                                                              
+Description "Mean of the time domain signal of the body angular acceleration in the y-axis in xyz space direction."
+            27                                                                                                     
+Variable    "t.body.gyro.jerk.mean.z"                                                                              
+Description "Mean of the time domain signal of the body angular acceleration in the z-axis in xyz space direction."
+            28                                                                                                                   
+Variable    "t.body.gyro.jerk.std.x"                                                                                             
+Description "Standard deviation of the time domain signal of the body angular acelleration in the x-axis in xyz space direction."
+            29                                                                                                                   
+Variable    "t.body.gyro.jerk.std.y"                                                                                             
+Description "Standard deviation of the time domain signal of the body angular acceleration in the y-axis in xyz space direction."
+            30                                                                                                                   
+Variable    "t.body.gyro.jerk.std.z"                                                                                             
+Description "Standard deviation of the time domain signal of the body angular acceleration in the z-axis in xyz space direction."
+            31                                                                                                     
+Variable    "t.body.acc.magnitude.mean"                                                                            
+Description "Mean of the time domain signal of the body angular acceleration in the y-axis in xyz space direction."
+            32                                                                                                     
+Variable    "t.body.acc.magnitude.std"                                                                             
+Description "Mean of the time domain signal of the body angular acceleration in the z-axis in xyz space direction."
+            33                                                                  
+Variable    "t.gravity.acc.magnitude.mean"                                      
+Description "Mean of the time domain signal of the body acceleration magnitude."
+            34                                                                                
+Variable    "t.gravity.acc.magnitude.std"                                                     
+Description "Standard deviation of the time domain signal of the body acceleration magnitude."
+            35                                                                       
+Variable    "t.body.acc.jerk.magnitude.mean"                                         
+Description "Mean of the time domain signal of the body acceleration jerk magnitude."
+            36                                                                                     
+Variable    "t.body.acc.jerk.magnitude.std"                                                        
+Description "Standard deviation of the time domain signal of the body acceleration jerk magnitude."
+            37                                                                   
+Variable    "t.body.gyro.magnitude.mean"                                         
+Description "Mean of the time domain signal of the body angular speed magnitude."
+            38                                                                                 
+Variable    "t.body.gyro.magnitude.std"                                                        
+Description "Standard deviation of the time domain signal of the body angular speed magnitude."
+            39                                                                          
+Variable    "t.body.gyro.jerk.magnitude.mean"                                           
+Description "Mean of the time domain signal of the body angular acceleration magnitude."
+            40                                                                                        
+Variable    "t.body.gyro.jerk.magnitude.std"                                                          
+Description "Standard deviation of the time domain signal of the body angular acceleration magnitude."
+            41                                                                                                  
+Variable    "f.body.acc.mean.x"                                                                                 
+Description "Mean of the frequency domain signal of the body acceleration in the x-axis in xyz space direction."
+            42                                                                                                  
+Variable    "f.body.acc.mean.y"                                                                                 
+Description "Mean of the frequency domain signal of the body acceleration in the y-axis in xyz space direction."
+            43                                                                                                  
+Variable    "f.body.acc.mean.z"                                                                                 
+Description "Mean of the frequency domain signal of the body acceleration in the z-axis in xyz space direction."
+            44                                                                                                                
+Variable    "f.body.acc.std.x"                                                                                                
+Description "Standard deviation of the frequency domain signal of the body acceleration in the x-axis in xyz space direction."
+            45                                                                                                                 
+Variable    "f.body.acc.std.y"                                                                                                 
+Description "Standard deviation of the frequency domain signal of the body acceleration in the y-axis in xyz space) direction."
+            46                                                                                                                
+Variable    "f.body.acc.std.z"                                                                                                
+Description "Standard deviation of the frequency domain signal of the body acceleration in the z-axis in xyz space direction."
+            47                                                                                                       
+Variable    "f.body.acc.jerk.mean.x"                                                                                 
+Description "Mean of the frequency domain signal of the body acceleration jerk in the x-axis in xyz space direction."
+            48                                                                                                       
+Variable    "f.body.acc.jerk.mean.y"                                                                                 
+Description "Mean of the frequency domain signal of the body acceleration jerk in the y-axis in xyz space direction."
+            49                                                                                                       
+Variable    "f.body.acc.jerk.mean.z"                                                                                 
+Description "Mean of the frequency domain signal of the body acceleration jerk in the z-axis in xyz space direction."
+            50                                                                                                                     
+Variable    "f.body.acc.jerk.std.x"                                                                                                
+Description "Standard deviation of the frequency domain signal of the body acceleration jerk in the x-axis in xyz space direction."
+            51                                                                                                                     
+Variable    "f.body.acc.jerk.std.y"                                                                                                
+Description "Standard deviation of the frequency domain signal of the body acceleration jerk in the y-axis in xyz space direction."
+            52                                                                                                                     
+Variable    "f.body.acc.jerk.std.z"                                                                                                
+Description "Standard deviation of the frequency domain signal of the body acceleration jerk in the z-axis in xyz space direction."
+            53                                                                                                   
+Variable    "f.body.gyro.mean.x"                                                                                 
+Description "Mean of the frequency domain signal of the body angular speed in the x-axis in xyz space direction."
+            54                                                                                                   
+Variable    "f.body.gyro.mean.y"                                                                                 
+Description "Mean of the frequency domain signal of the body angular speed in the y-axis in xyz space direction."
+            55                                                                                                   
+Variable    "f.body.gyro.mean.z"                                                                                 
+Description "Mean of the frequency domain signal of the body angular speed in the z-axis in xyz space direction."
+            56                                                                                                                 
+Variable    "f.body.gyro.std.x"                                                                                                
+Description "Standard deviation of the frequency domain signal of the body angular speed in the x-axis in xyz space direction."
+            57                                                                                                                 
+Variable    "f.body.gyro.std.y"                                                                                                
+Description "Standard deviation of the frequency domain signal of the body angular speed in the y-axis in xyz space direction."
+            58                                                                                                                 
+Variable    "f.body.gyro.std.z"                                                                                                
+Description "Standard deviation of the frequency domain signal of the body angular speed in the z-axis in xyz space direction."
+            59                                                                            
+Variable    "f.body.acc.magnitude.mean"                                                   
+Description "Mean of the frequency domain signal of the body acceleration jerk magnitude."
+            60                                                                                          
+Variable    "f.body.acc.magnitude.std"                                                                  
+Description "Standard deviation of the frequency domain signal of the body acceleration jerk magnitude."
+            61                                                                        
+Variable    "f.body.acc.jerk.magnitude.mean"                                          
+Description "Mean of the frequency domain signal of the body angular speed magnitude."
+            62                                                                                      
+Variable    "f.body.acc.jerk.magnitude.std"                                                         
+Description "Standard deviation of the frequency domain signal of the body angular speed magnitude."
+            63                                                                               
+Variable    "f.body.gyro.magnitude.mean"                                                     
+Description "Mean of the frequency domain signal of the body angular acceleration magnitude."
+            64                                                                                             
+Variable    "f.body.gyro.magnitude.std"                                                                    
+Description "Standard deviation of the frequency domain signal of the body angular acceleration magnitude."
+            65                                                                            
+Variable    "f.body.gyro.jerk.magnitude.mean"                                             
+Description "Mean of the frequency domain signal of the body acceleration jerk magnitude."
+            66                                                                                          
+Variable    "f.body.gyro.jerk.magnitude.std"                                                            
+Description "Standard deviation of the frequency domain signal of the body acceleration jerk magnitude."
 
-- 'activity_labels.txt': Links the class labels with their activity name:  WALKING, WALKING_UPSTAIRS WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+**Construction of Variable Names**
+The names of the variables are cleaned versions of the variable names provided derived from the names provided in the features.txt file. Generally, the original names followed this example format:
 
-- 'train/X_train.txt': Training set of 7352 rows and 561 columns.
+ tBodyAcc-mean()-X 
+ t=domain name time or frequency
 
-- 'train/y_train.txt': Training labels to link the activity labels to the features.  Length 7352.
+ Body=signal type "body" or "gravity," as separated via filtering of the signals
 
-- 'test/X_test.txt': Test set.  2947 rows, 561 columns
+ Acc= measuring device "accelerometer" or "gyroscope"
 
-- 'test/y_test.txt': Test labels to link the activity lables to the features.  Length 2947
+ mean()-X= statistic "mean" or "standard deviation" and axis in xyz space.
 
-The following files are available for the train and test data. Their descriptions are equivalent. 
+This format had several problems that needed to be addressed from the standpoint of tidy names.  First, the symbols "()" and "-" can be misinterpreted by R and needed to be removed.  Second, there is a mix of small and large cap letters which complicated key strokes.  I chose the following format for variable names:
 
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+"t.body.acc.mean.x"
 
-- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
+My standard is to separate the major features with ".", maintain lowercase letters, and keep short identifier segments.  My point of view is that I am creating these names for researchers who are relatively familiar with this dataset and I want to them to not need a lot of keystrokes but provide a good visual distinction between variables so that they can identify the variable at a glance. I used the longer names for "gravity" and "magnitude" which were less common among the variables.  Note: there seemed to be a few types "bodybody" that I changed to "body".
 
-- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+The procedure for refining variable names used the gsub function sequenced in a way that would get my desired result.  
 
-- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+**Subjects**
 
-The Inertial Signals data set was not needed for this project.
+There are 30 unique subjects (identified by the numbers 1-30) represented in this dataset.  The subjects were designated either "test" or "training".  This distinction is important for the statistical analysis and refinement of the data estimates but is not important for this assignment so no distinction is made. 
 
-The training data had a dimension of 561 columns representing the features and 7352 rows of observations.
-The test data had a dimension of 561 columns representing the features and 2941 rows of observations. 
+**Activity**
 
-**The Variables**
+There are six activities that are represented by the data.  The activities are: Walking, Walking Downstairs, Walking Upstairs, Sitting, Standing and Laying.  The main goal of activity monitoring is to correctly identify from the monitoring device measurements what the subject is doing and for how long.  
 
-The 561 variables as described in features_info.txt included accelerometer and gyroscope 3-axial raw signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+**Calculated value: average.measure.by.subjects.activity**
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+There is one mean for each of the 10,088 combinations of variable, subject and activity. Shown below are the mean values for t.body.acc.mean.x for subject "1" by activity.
 
-The set of variables that were estimated from these signals are: 
+t.body.acc.mean.x	1	WALKING	0.2773
+t.body.acc.mean.x	1	WALKING_UPSTAIRS	0.2555
+t.body.acc.mean.x	1	WALKING_DOWNSTAIRS	0.2892
+t.body.acc.mean.x	1	SITTING	0.2612
+t.body.acc.mean.x	1	STANDING	0.2789
+t.body.acc.mean.x	1	LAYING	0.2216
 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+This mean is a mean of all of the observations for that subject that as classified by activity. 
 
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+###**Raw Data**  ###
 
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
+The raw data were provided in the inertial signals folder provide with the UCI HAR Dataset.  They include 9 very large files or reading from the accelerometer and gyroscope in the Samsung devices worn by the 30 subjects.  
+
+The files represent body acceleration readings on the x, y and z vectors, body gyroscope readings on the x, y and Z vectors and total body acceleration readings on the x,y and Z vectors.  
+
+These data were refined and modified to create the 561 variables in the test and training sets.
+
+The 3-axial time domain signals from accelerometer and gyroscope were captured at a constant rate of
+50 Hz. Then they were filtered to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals using another filter. Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals. Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm. Finally a Fast Fourier Transform (FFT) was applied to some of these time domain signals to obtain frequency
+domain signals.
 
 
-**Data Cleaning and Refinement**
+ **Working data**
 
-Several steps were taken to refine the data.  First, the analysis was limited to mean and standard deviation data. So conditions for subsetting the data needed to be established.  After exploring possible combinations of strings with the grep command, the most reasonable combination was determined to be a grep of all variables (feature names) that contained "mean" (without regard to case) and "std".  This resulted in a subset of 86 variables, 53 related to mean and 33 related to std.
+These data were provided to students in The training data had a dimension of 561 columns representing the features and 7352 rows of observations. The test data had a dimension of 561 columns representing the features and 2941 rows of observations.
 
-Further procession was done on the feature names.  The main goal was to clear out errors and to reduce the use some shift key strokes while not causing the potential for confusion.  
+Students received the following files:
 
+'features_info.txt': Shows information about the variables used on the feature vector.
+'features.txt': List of all features.
+'activity_labels.txt': Links the class labels with their activity name.
+'train/X_train.txt': Training set.
+'train/y_train.txt': Training activity id code.
+'test/X_test.txt': Test set.
+'test/y_test.txt': Test activity id code.
+'subject_test.txt':  Test subject id.
+'subject_train.txt':  Training subject id.
 
-- The gsub function was used to get rid of a mistake that doubled up the word "body" in a few variables;
-- The tolower funtion was used to change every letter to lower case.
-- The "-" mark was eliminated and the text collapsed.
-- The "()" combination was replaced with the "_".
+In order to accomplish the project, the test and training sets were rbinded together and cbinded with the subject and activity.  The activity labels were linked to the activity codes to create a final master file of 68 columns and 10,299 rows. 
 
-No actual words were changed based on the assumption that the variable names contained information meaningful to those who were deep into this data.  The resultant variable names were:
+Finally the features.txt file was subsetted by to include only the columns with labels that included the terms "-mean() or -std()" which eliminated all but 66 of the 561 features.  The feature names had been cleaned as described above. 
 
-tbodyaccmean_x, tbodyaccmean_y, tbodyaccmean_z, tbodyaccstd_x, tbodyaccstd_y, tbodyaccstd_z, tgravityaccmean_x, tgravityaccmean_y, tgravityaccmean_z, tgravityaccstd_x, tgravityaccstd_y, tgravityaccstd_z, tbodyaccjerkmean_x, tbodyaccjerkmean_y, tbodyaccjerkmean_z, tbodyaccjerkstd_x, tbodyaccjerkstd_y, tbodyaccjerkstd_z, tbodygyromean_x, tbodygyromean_y, tbodygyromean_z, tbodygyrostd_x, tbodygyrostd_y, tbodygyrostd_z, tbodygyrojerkmean_x, tbodygyrojerkmean_y, tbodygyrojerkmean_z, tbodygyrojerkstd_x, tbodygyrojerkstd_y, tbodygyrojerkstd_z, tbodyaccmagmean_, tbodyaccmagstd_, tgravityaccmagmean_, tgravityaccmagstd_, tbodyaccjerkmagmean_, tbodyaccjerkmagstd_, tbodygyromagmean_, tbodygyromagstd_, tbodygyrojerkmagmean_, tbodygyrojerkmagstd_, fbodyaccmean_x, fbodyaccmean_y, fbodyaccmean_z, fbodyaccstd_x, fbodyaccstd_y, fbodyaccstd_z, fbodyaccmeanfreq_x, fbodyaccmeanfreq_y, fbodyaccmeanfreq_z, fbodyaccjerkmean_x, fbodyaccjerkmean_y, fbodyaccjerkmean_z, fbodyaccjerkstd_x, fbodyaccjerkstd_y, fbodyaccjerkstd_z, fbodyaccjerkmeanfreq_x, fbodyaccjerkmeanfreq_y, fbodyaccjerkmeanfreq_z, fbodygyromean_x, fbodygyromean_y, fbodygyromean_z, fbodygyrostd_x, fbodygyrostd_y, fbodygyrostd_z, fbodygyromeanfreq_x, fbodygyromeanfreq_y, fbodygyromeanfreq_z, fbodyaccmagmean_, fbodyaccmagstd_, fbodyaccmagmeanfreq_, fbodyaccjerkmagmean_, fbodyaccjerkmagstd_, fbodyaccjerkmagmeanfreq_, fbodygyromagmean_, fbodygyromagstd_, fbodygyromagmeanfreq_, fbodygyrojerkmagmean_, fbodygyrojerkmagstd_, fbodygyrojerkmagmeanfreq_, angle(tbodyaccmean,gravity), angle(tbodyaccjerkmean),gravitymean), angle(tbodygyromean,gravitymean), angle(tbodygyrojerkmean,gravitymean), angle(x,gravitymean), angle(y,gravitymean), angle(z,gravitymean)  
-
-New or adjusted variables.
-
-The activity variable was added by indexing to the test and training sets.  A couple of minor variables were added.  First a variable  (obstype) reflecting whether the data was from the test or training set.  And the subject number variable was named "subjectid."
-
+These data were then "melted" in a long format resulting in an intermediate data frame of 679,734 X 4 and then "group_by" subject activity and mean  into a data frame of 11,880 by 4.  This is the tidy data set.  

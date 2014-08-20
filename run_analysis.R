@@ -13,7 +13,7 @@ Reading in the data
 #with the dimensions 10299 X 561.  The steps are  
 #1. Rbind the following data files together.
 #  a. Xtrain and Xtest into a 10299 X 561 data.frame with the data and observations
-#  b. X_train and y_train into a 10299 X 1 data.frame of raw activity codes  
+#  b. y_train and y_test into a 10299 X 1 data.frame of raw activity codes  
 #  c. subject_test and subjecttrain into a 10299 X 1 data.frame of subject ids  
 #  d. cbind the data.frames (a,b,c) together.  
 #  e. apply activity names to activity codes as factors
@@ -35,7 +35,7 @@ complete_rawdata<-cbind(rawdata, subj_id, act1) #preserves the order for subsequ
 activityname<-read.table("./UCI HAR Dataset/activity_labels.txt")
 complete_rawdata$activity<-factor(complete_rawdata$activity,levels=activityname$V1, labels=activityname$V2 )
 
-
+dim(complete_rawdata)
 #Gets the variable name list of the data. Result is 561 variable names.  
 #Subset the activity data to only include "mean()" and "std()" columns as that is one reasonable interpretation of the instructions.  This results in 66 columns
 colfeature<-read.table("./UCI HAR Dataset/features.txt", colClasses="character")
