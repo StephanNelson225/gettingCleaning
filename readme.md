@@ -14,7 +14,7 @@ I then tidy up the feature names a little and then add them as variable names to
 
 Rbinding these together as "activitymonitor", I archive it to disk as a 10299 X 68 file "activitymonitor.txt". 
 
-The next part of the assignment was to creates a second, independent tidy data set with the average of each variable for each activity and each subject. Here, I called the plyr, dplyr and reshape2 packages and melted the data into a lengthy 679734 X 4 data.frame consisting of variables "subject" "activity"  "variable"  "value" .  Then I used "group_by function to cast the data into similarly-sized dataframe and  summarized the data by average variable value by subject and activity (average.measure.by.subjects.activity).  
+The next part of the assignment was to creates a second, independent tidy data set with the average of each variable for each activity and each subject. Here, I called the dplyr and reshape2 packages and melted the data into a lengthy 679734 X 4 data.frame consisting of variables "subject" "activity"  "variable"  "value" .  Then I used "group_by function to cast the data into similarly-sized dataframe and  summarized the data by average variable value by subject and activity (averagemeasurebysubjectsactivity).  
 
 This dataset is called "tidyactivitymonitor" has the dimensions 11880X4 and was uploaded as the text file "tidyactivitymonitor.txt" to Coursera.
 

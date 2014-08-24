@@ -48,7 +48,7 @@ refined_rawdata<-complete_rawdata[,c(562,563,as.numeric(nameset$featureid))] #th
 
 #Feature names are untidy need clarification. This sequence of 14 steps to clean the names.
 #This creates names with major idendifiers separated by "." , less common
-#identifiers written out and dashes and parens eliminated.
+#identifiers written out and dashes and parens eliminated. Uses google stye manual.
 nameset1<-gsub("BodyBody" ,"Body", nameset$featurename)#second body is assumed a typo.
 nameset2<-gsub("^t", "t.", nameset1)
 nameset3<-gsub("^f", "f.", nameset2)
@@ -74,7 +74,6 @@ activitymonitor<-refined_rawdata # add better data.table name
 
 
 # create a second tidy set for submission to Coursera with the average of #each variable for each activity and each subject. 
-require(plyr)
 require(dplyr) 
 require(reshape2)
 actmonitor<-melt(activitymonitor, id.var=c("subject","activity"))
@@ -82,9 +81,9 @@ actmonitor<-melt(activitymonitor, id.var=c("subject","activity"))
 monitorgroups<-group_by(actmonitor, variable, subject, activity)
 #once melted and grouped the dimensins 679734X4 - long format
 #instructions:Creates a second, independent tidy data set with the average of each variable for each activity and each subject. This implies the order of variable, subjectid, activity and mean value.
-tidyactivitymonitor<-summarize(monitorgroups, average.measure.by.subjects.activity=round(mean(value),4))
+tidyactivitymonitor<-summarize(monitorgroups, averagemeasurebysubjectsactivity=round(mean(value),4))
 # 11880X4
-# write.table(tidyactivitymonitor,"tidyactivitymonitor.txt",row.names=FALSE)# without the row.names false argument, the text file columns don't line up right.
+write.table(tidyactivitymonitor,"tidyactivitymonitor.txt",row.names=FALSE)# without the row.names false argument, the text file columns don't line up right.
 #Example mean data for WALKING measure for first subject  
 a<-subset(tidyactivitymonitor,tidyactivitymonitor[,2]==1 & tidyactivitymonitor[,3]=="WALKING")
-a
+head(a)

@@ -1,7 +1,7 @@
 
 ###Code book for Tidy Data  ###
 ###  ###
-The tidy dataset ( tidyactivitymonitor.txt) submitted for this  project has the dimension of 10,088 rows by four variable columns.  This tidy data is in the long format with the first column being that variable name the second column the subject number, the third column is the activity name and the fourth column is the mean of the variable measures for the given subject and activity.  This calculated values is named  "average.measure.by.subjects.activity".
+The tidy dataset ( tidyactivitymonitor.txt) submitted for this  project has the dimension of 10,088 rows by four variable columns.  This tidy data is in the long format with the first column being that variable name the second column the subject number, the third column is the activity name and the fourth column is the mean of the variable measures for the given subject and activity.  This calculated values is named  "averagemeasurebysubjectsactivity".
 
 The means represent values for 66 variables, for each of 30 subjects and 6 activity types.  The variables and their descriptions follow:
 
@@ -221,7 +221,7 @@ This format had several problems that needed to be addressed from the standpoint
 
 "t.body.acc.mean.x"
 
-My standard is to separate the major features with ".", maintain lowercase letters, and keep short identifier segments.  My point of view is that I am creating these names for researchers who are relatively familiar with this dataset and I want to them to not need a lot of keystrokes but provide a good visual distinction between variables so that they can identify the variable at a glance. I used the longer names for "gravity" and "magnitude" which were less common among the variables.  Note: there seemed to be a few types "bodybody" that I changed to "body".
+My standard is to separate the major features with ".", maintain lowercase letters, and keep short identifier segments.  My point of view is that I am creating these names for researchers who are relatively familiar with this dataset and I want to them to not need a lot of keystrokes but provide a good visual distinction between variables so that they can identify the variable at a glance. I used the longer names for "gravity" and "magnitude" which were less common among the variables.  Note: there seemed to be a few typos "bodybody" that I changed to "body".  My style follows the most common naming convention and allows for understandable but compact names. see http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf.  The conventions that seemed to be endorsed in the forums created very clumsy names that did not fit with exploratory graphics or tabular summaries.
 
 The procedure for refining variable names used the gsub function sequenced in a way that would get my desired result.  
 
@@ -233,7 +233,7 @@ There are 30 unique subjects (identified by the numbers 1-30) represented in thi
 
 There are six activities that are represented by the data.  The activities are: Walking, Walking Downstairs, Walking Upstairs, Sitting, Standing and Laying.  The main goal of activity monitoring is to correctly identify from the monitoring device measurements what the subject is doing and for how long.  
 
-**Calculated value: average.measure.by.subjects.activity**
+**Calculated value: averagemeasurebysubjectsactivity**
 
 There is one mean for each of the 10,088 combinations of variable, subject and activity. Shown below are the mean values for t.body.acc.mean.x for subject "1" by activity.
 
